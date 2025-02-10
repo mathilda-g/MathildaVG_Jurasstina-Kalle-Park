@@ -3,4 +3,9 @@
 .vscode
 .robotcode_cache
 results
+*.log
+log.html
+output.xml
+report.html
+
 
