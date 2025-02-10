@@ -12,4 +12,4 @@ password_long = 'p4$$w0rd'
 register_link = "data:section:register-section"
 login_link = "data:section:login-section"
 buy_tickets_link = "data:section:tickets-section"
-book_safari = "data:section:safari-section"
+book_safari_link = "data:section:safari-section"
