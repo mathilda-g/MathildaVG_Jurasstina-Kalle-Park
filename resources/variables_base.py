@@ -16,8 +16,8 @@ book_safaris_link = "data:section:safari-section"
 buy_tickets_link = "data:section:tickets-section"
 cart_link = "data:section:cart-section"
 
-add_to_cart_success_alert = 'Item added to cart!'
-checkout_success_alert = 'Checkout Summary:'
+add_to_cart_success_alert = "Item added to cart!"
+checkout_success_alert = "Checkout Summary:"
 
 # Register page
 register_section = "id:register-section"  # use with keyword Element Should Be Visible
