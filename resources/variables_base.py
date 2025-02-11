@@ -14,7 +14,7 @@ login_link = "data:section:login-section"
 book_safari_link = "data:section:safari-section"
 buy_tickets_link = "data:section:tickets-section"
 
-#Buy Tickets
+#Buy Tickets - Kelley
 ticket_type = "id=ticket-type"
 adult_ticket = "value=Adult"
 child_ticket = "value=Child"
@@ -30,3 +30,10 @@ enter_ticket_quantity = '1'
 add_to_cart = "type=submit"
 
 added_to_cart_alert_message = 'Item added to cart!'
+
+#Cart Page - Kelley 
+
+cart_link = "id=cart-nav"
+checkout_button = "id=checkout-button"
+
+checkout_summary_alert_message = 'Checkout Summary:'
