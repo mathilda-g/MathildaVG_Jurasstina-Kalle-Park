@@ -41,14 +41,11 @@ safari_success_alert = "Item added to cart!"
 # Login Page
 login_section = "id:login-section" 
 login_form = "id:login-form"  
-
 login_username_label = "for:login-username"  
 login_password_label = "for:login-password"  
 login_username_field = "id:login-username"  
 login_password_field = "id:login-password"  
-
 login_button = "type:submit"  
-
 login_message = "id:login-message"  
 
 #Buy Tickets
@@ -56,20 +53,15 @@ ticket_type = "id:ticket-type"
 adult_ticket = "value:Adult"
 child_ticket = "value:Child"
 senior_ticket = "value:Senior"
-
 ticket_category = "id:ticket-category"
 vip_ticket = "value:VIP"
 regular_ticket = "value:Regular"
-
 ticket_quantity = "id:ticket-quantity"
 enter_ticket_quantity = '1'
-
 add_to_cart = "type:submit"
-
 added_to_cart_alert_message = 'Item added to cart!'
 
 #Cart Page
 cart_link = "id:cart-nav"
 checkout_button = "id:checkout-button"
-
 checkout_summary_alert_message = 'Checkout Summary:'
