@@ -14,6 +14,19 @@ login_link = "data:section:login-section"
 book_safari_link = "data:section:safari-section"
 buy_tickets_link = "data:section:tickets-section"
 
+#Login Page
+login_section = "id=login-section" 
+login_form = "id=login-form"  
+
+login_username_label = "for=login-username"  
+login_password_label = "for=login-password"  
+login_username_field = "id=login-username"  
+login_password_field = "id=login-password"  
+
+login_button = "type=submit"  
+
+login_message = "id=login-message"  
+
 #Buy Tickets
 ticket_type = "id:ticket-type"
 adult_ticket = "value:Adult"
