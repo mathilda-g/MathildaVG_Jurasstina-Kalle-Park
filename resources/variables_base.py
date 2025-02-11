@@ -51,12 +51,18 @@ safari_error_past_date = "You cannot book a safari for a date in the past."
 safari_error_no_ticket = "You must purchase a general admission ticket before booking a safari."
 safari_error_no_vip = "Only VIP users can book the selected safari option."
 safari_error_weekend_no_vip = "VIP tickets required to book safaris on weekends."
+safari_success_alert = "Item added to cart!"
 
 # Login Page
 login_section = "id:login-section"
 login_username_input = "id:login-username"
 login_password_input = "id:login-password"
 login_form = "id:login-form"
+login_username_label = "for:login-username"  
+login_password_label = "for:login-password"  
+login_username_field = "id:login-username"  
+login_password_field = "id:login-password"  
+login_button = "type:submit"  
 login_message = "id:login-message"
 logout_link = "id:logout-link"
 
