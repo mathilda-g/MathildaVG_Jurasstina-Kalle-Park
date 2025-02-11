@@ -4,22 +4,28 @@ BROWSER = "chrome"
 current_directory = os.getcwd().replace('\\', '/')
 url = f"file:///{current_directory}/jurap.html"
 
+# Timeouts
+standard_timeout = "10s"
+
+# Login Entry
 username_with_numbers = '1234'
 username_with_letters = 'StinaKalle'
 username_with_special_characters = '!"%&åÄö'
 password_short = '1'
 password_long = 'p4$$w0rd'
 
+# Page Links
 register_link = "data:section:register-section"
 login_link = "data:section:login-section"
 book_safaris_link = "data:section:safari-section"
 buy_tickets_link = "data:section:tickets-section"
 cart_link = "data:section:cart-section"
 
+# Alert Message
 add_to_cart_success_alert = "Item added to cart!"
 checkout_success_alert = "Checkout Summary:"
 
-# Register page
+# Register Page
 register_section = "id:register-section"  # use with keyword Element Should Be Visible
 register_username_input = "id:reg-username"
 register_password_input = "id:reg-password"
@@ -29,10 +35,10 @@ register_error_short_password = "Password must be at least 8 characters long."
 register_error_no_username_password = "Please enter both a username and password."
 register_error_username_already_exists = "Username already exists. Please choose another."
 register_success_message = "Registration successful! Redirecting to login..."
+register_button = "Register"
 
-# Book safaris page
+# Book Safaris Page
 safari_section = "id:safari-section"
-
 safari_date_input = "id:safari-date"
 safari_date_past = "2021-01-01"
 safari_date_workday = "2100-01-01"
