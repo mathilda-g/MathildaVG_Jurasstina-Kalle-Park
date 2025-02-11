@@ -12,8 +12,12 @@ password_long = 'p4$$w0rd'
 
 register_link = "data:section:register-section"
 login_link = "data:section:login-section"
-book_safari_link = "data:section:safari-section"
+book_safaris_link = "data:section:safari-section"
 buy_tickets_link = "data:section:tickets-section"
+cart_link = "data:section:cart-section"
+
+add_to_cart_success_alert = 'Item added to cart!'
+checkout_success_alert = 'Checkout Summary:'
 
 # Register page
 register_section = "id:register-section"  # use with keyword Element Should Be Visible
@@ -28,40 +32,47 @@ register_success_message = "Registration successful! Redirecting to login..."
 
 # Book safaris page
 safari_section = "id:safari-section"
+
 safari_date_input = "id:safari-date"
+safari_date_past = "2021-01-01"
+safari_date_workday = "2100-01-01"
+safari_date_weekend = "2100-01-02"
+
 safari_type_select = "id:safari-type"
+safari_regular_option1 = "Herbivore Tour"
+safari_regular_option2 = "T-Rex Rumble"
+safari_vip_option1 = "Herbivore Tour with Feeding"
+safari_feeding_option = safari_vip_option1
+safari_vip_option2 = "T-Rex Rumble eXtreme Thrill Pack"
+
 safari_form = "id:safari-form"
 safari_message = "id:safari-message"
 safari_error_past_date = "You cannot book a safari for a date in the past."
 safari_error_no_ticket = "You must purchase a general admission ticket before booking a safari."
 safari_error_no_vip = "Only VIP users can book the selected safari option."
 safari_error_weekend_no_vip = "VIP tickets required to book safaris on weekends."
-safari_success_alert = "Item added to cart!"
 
 # Login Page
-login_section = "id:login-section" 
-login_form = "id:login-form"  
-login_username_label = "for:login-username"  
-login_password_label = "for:login-password"  
-login_username_field = "id:login-username"  
-login_password_field = "id:login-password"  
-login_button = "type:submit"  
-login_message = "id:login-message"  
+login_section = "id:login-section"
+login_username_input = "id:login-username"
+login_password_input = "id:login-password"
+login_form = "id:login-form"
+login_message = "id:login-message"
+logout_link = "id:logout-link"
 
-#Buy Tickets
-ticket_type = "id:ticket-type"
-adult_ticket = "value:Adult"
-child_ticket = "value:Child"
-senior_ticket = "value:Senior"
-ticket_category = "id:ticket-category"
-vip_ticket = "value:VIP"
-regular_ticket = "value:Regular"
-ticket_quantity = "id:ticket-quantity"
-enter_ticket_quantity = '1'
-add_to_cart = "type:submit"
-added_to_cart_alert_message = 'Item added to cart!'
+# Buy Tickets
+tickets_section = "id:tickets-section"
+tickets_type_select = "id:ticket-type"
+tickets_adult_ticket = "Adult"
+tickets_child_ticket = "Child"
+tickets_senior_ticket = "Senior"
+tickets_category_select = "id:ticket-category"
+tickets_vip_ticket = "VIP"
+tickets_regular_ticket = "Regular"
+tickets_ticket_quantity = "id:ticket-quantity"
+tickets_form = "id:ticket-form"
 
-#Cart Page
-cart_link = "id:cart-nav"
-checkout_button = "id:checkout-button"
-checkout_summary_alert_message = 'Checkout Summary:'
+# Cart Page
+cart_section = "id:cart-section"
+cart_items = "css:#cart-details ul"
+cart_checkout_button = "id:checkout-button"
