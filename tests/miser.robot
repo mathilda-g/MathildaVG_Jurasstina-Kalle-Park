@@ -24,11 +24,3 @@ No Discount on Adult Entry Ticket
     And I add a Regular Adult ticket to my cart
     And Navigate to the Cart page
     Then The total price should not reflect a ticket discount
-
-test1
-    [Tags]    Kelley
-    Given I am logged in as "Ståla-Nalle"
-    And I navigate to the Buy Tickets page
-    When I add a VIP Adult ticket to my cart
-    And Navigate to the Cart page
-    Then The total price should not reflect a ticket discount
