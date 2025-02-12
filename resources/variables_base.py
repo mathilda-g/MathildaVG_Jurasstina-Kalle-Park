@@ -65,7 +65,7 @@ login_username_label = "for:login-username"
 login_password_label = "for:login-password"  
 login_username_field = "id:login-username"  
 login_password_field = "id:login-password"  
-login_button = "type:submit"  
+login_button = "Login"  
 login_message = "id:login-message"
 logout_link = "id:logout-link"
 
@@ -80,6 +80,7 @@ tickets_vip_ticket = "VIP"
 tickets_regular_ticket = "Regular"
 tickets_ticket_quantity = "id:ticket-quantity"
 tickets_form = "id:ticket-form"
+tickets_button = "Add to Cart"
 
 # Cart Page
 cart_section = "id:cart-section"
