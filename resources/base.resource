@@ -9,6 +9,10 @@ I am on the ${page_name} page
     Click Link    ${${page}_link}
     Wait Until Element Is Visible    ${${page}_section}
 
+I navigate to the ${page_name} page
+    [Tags]    Kelley    Victor_refactored
+    I am on the ${page_name} page
+
 I enter username ${username}
     [Tags]    Victor
     Input Text    ${${page}_username_input}    ${username}
@@ -32,19 +36,19 @@ I should be logged in
 
 I am registered as ${username}
     [Tags]    Victor
-    I have the register page open
+    I am on the register page
     And I enter username ${username}
-    And a valid password
+    And I enter a valid password
     And submit the form
     And I should be redirected to the login page
 
 I am logged in as ${username}
-    [Tags]    Victor
+    [Tags]    Kelley Victor_refactored
     I am registered as ${username}
     And I enter username ${username}
-    And a valid password
+    And I enter a valid password
     And submit the form
-    And I should be redirected to the login page
+    And I should be logged in
 
 Message Should Be Visible
     [Arguments]    ${error_message_element}    ${error_message_text}

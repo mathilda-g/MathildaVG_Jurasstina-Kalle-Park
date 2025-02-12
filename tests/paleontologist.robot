@@ -13,13 +13,13 @@ Register user Stina-Palle
     When I enter username Stina-Palle
     And I enter a valid password
     And submit the form
-    Then I should see a message confirming a successful registration
+    Then I should see a message confirming successful registration
     And I should be redirected to the login page
 
 Login user Stina-Palle
     Given I am registered as Stina-Palle
-    And I have the login page open
+    And I am on the login page
     When I enter username Stina-Palle
-    And a valid password
+    And I enter a valid password
     And submit the form
     Then I should be logged in
