@@ -18,6 +18,9 @@ book_safaris_link = "data:section:safari-section"
 buy_tickets_link = "data:section:tickets-section"
 cart_link = "data:section:cart-section"
 
+# Home Page Visability
+home_page_text = "id:home-section"
+
 # Alert Message
 add_to_cart_success_alert = "Item added to cart!"
 checkout_success_alert = "Checkout Summary:"
