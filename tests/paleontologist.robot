@@ -1,12 +1,11 @@
 *** Settings ***
 Name             Paleontologist
-Documentation    Description goes here
+Documentation    Tests for paleontologist
 Library          SeleniumLibrary
-Resource         resources/paleontologist.resource
-Resource         resources/base.resource
-Variables        resources/variables_base.py
-Variables        resources/variables_paleontologist.py
+Resource         ../resources/base.resource
+Resource         ../resources/paleontologist.resource
+Variables        ../resources/variables_base.py
+Variables        ../resources/variables_miser.py
 
 *** Test Cases ***
-first
-    Log    Hello World
+
