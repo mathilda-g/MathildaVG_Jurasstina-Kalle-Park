@@ -4,9 +4,6 @@ BROWSER = "chrome"
 current_directory = os.getcwd().replace('\\', '/')
 url = f"file:///{current_directory}/jurap.html"
 
-# Timeouts
-standard_timeout = "10s"
-
 # Login Entry
 username_with_numbers = '1234'
 username_with_letters = 'StinaKalle'

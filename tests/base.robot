@@ -10,27 +10,27 @@ Variables        ../resources/variables_base.py
 *** Test Cases ***
 Create Valid Password
     [Tags]    Kelley
-   GIVEN I am on the Register page
-   AND I have entered a valid username
-   WHEN I enter a valid password
-   AND Click on the register button
-   THEN I should see a message confirming successful registration
-   AND I should be redirected to the login page
+   Given I am on the Register page
+   And I have entered a valid username
+   When I enter a valid password
+   And Click on the register button
+   Then I should see a message confirming successful registration
+   And I should be redirected to the login page
 
 Create Invalid Password
     [Tags]    Kelley
-    GIVEN I am on the Register page
-    AND I have entered a valid username
-    WHEN I enter an invalid password
-    AND Click on the register button
-    THEN I should see an error message
+    Given I am on the Register page
+    And I have entered a valid username
+    When I enter an invalid password
+    And Click on the register button
+    Then I should see an error message
      
 Register A Username With Special Characters
     [Tags]    Kelley
-    GIVEN I am on the Register page
-    WHEN I create a username using special characters
-    AND I enter a valid password
-    AND Click on the register button
-    THEN I should see a message confirming successful registration
-    AND I should be redirected to the login page
+    Given I am on the Register page
+    When I create a username using special characters
+    And I enter a valid password
+    And Click on the register button
+    Then I should see a message confirming successful registration
+    And I should be redirected to the login page
 
