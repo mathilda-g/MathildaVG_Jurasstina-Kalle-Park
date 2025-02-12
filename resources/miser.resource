@@ -5,7 +5,6 @@ Variables        ../resources/variables_base.py
 Variables        ../resources/variables_miser.py
 
 *** Keywords ***
-
 I am logged in as "Ståla-Nalle"
     [Tags]    Kelley
     Open Browser    ${url}    ${BROWSER}
@@ -29,3 +28,18 @@ I add a ${ticket_category} ${ticket_type} ticket to my cart
     Select From List By Value    ${tickets_category_select}    ${ticket_category}
     Select From List By Value    ${tickets_type_select}    ${ticket_type}
     Click Button    ${tickets_button}
+    Handle Alert
+
+Navigate to the Cart page
+    [Tags]    Kelley
+    Click Element    ${cart_link}
+    Wait Until Element Is Visible    ${cart_section}
+
+The total price should not reflect a ticket discount
+    [Tags]    Kelley
+    
+
+
+
+
+
