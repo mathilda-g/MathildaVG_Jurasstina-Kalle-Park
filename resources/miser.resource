@@ -1,6 +1,5 @@
 *** Settings ***
 Library          SeleniumLibrary
-Library    XML
 Variables        ../resources/variables_base.py
 Variables        ../resources/variables_miser.py
 
@@ -37,6 +36,9 @@ Navigate to the Cart page
 
 The total price should not reflect a ticket discount
     [Tags]    Kelley
+
+
+
     
 
 
