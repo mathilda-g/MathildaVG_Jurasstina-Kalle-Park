@@ -15,7 +15,7 @@ I am logged in as "Ståla-Nalle"
     Input Text    ${login_username_input}    ${miser_username}
     Input Text    ${login_password_input}    ${miser_password}
     Click Button    ${login_button}
-    Wait Until Element Is Visible    ${home_page_text}    
+    Wait Until Element Is Visible    ${logout_link}    
 
 I navigate to the Buy Tickets page
     [Tags]    Kelley
