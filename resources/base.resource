@@ -86,6 +86,7 @@ I should see an error message
     
 I add a ${ticket_category} ${ticket_type} ticket to my cart
     [Tags]    Kelley
+    [Documentation]    Adds desired ticket type to cart, utilizing the standard ticket quantity of 1
     Select From List By Value    ${tickets_category_select}    ${ticket_category}
     Select From List By Value    ${tickets_type_select}    ${ticket_type}
     Click Button    ${tickets_button}

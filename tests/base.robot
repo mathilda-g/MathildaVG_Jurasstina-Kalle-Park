@@ -48,7 +48,7 @@ Add a Regular Adult ticket to cart
     Given I am logged in as user
     And I am on the tickets page
     When I add a Regular Adult ticket to my cart
-    Then the regular adult ticket should be listed on the cart page
+    Then the Regular Adult Ticket should be listed on the cart page
 
 Book regular safari on a workday
     [Tags]    Victor
