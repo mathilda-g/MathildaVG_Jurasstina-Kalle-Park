@@ -1,6 +1,7 @@
 *** Settings ***
 Name             Base
-Documentation    General tests not specific to a user story
+Documentation    Grupp 5, Victor, Kelley och Mathilda
+...              General tests not specific to a user story
 Library          SeleniumLibrary
 Resource         resources/base.resource
 Test Setup       Open Browser    ${url}    ${BROWSER}
