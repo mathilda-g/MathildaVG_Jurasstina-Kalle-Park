@@ -18,7 +18,7 @@ safari_link = "data:section:safari-section"
 tickets_link = "data:section:tickets-section"
 cart_link = "data:section:cart-section"
 
-# Home Page Visability
+# Home Page Visibility
 home_page_text = "id:home-section"
 
 # Alert Message
@@ -40,9 +40,9 @@ register_button = "Register"
 # Book Safaris Page
 safari_section = "id:safari-section"
 safari_date_input = "id:safari-date"
-safari_date_past = "2021-01-01"
-safari_date_workday = "2100-01-01"
-safari_date_weekend = "2100-01-02"
+safari_past_date = "2021-01-01"
+safari_workday_date = "2100-01-01"
+safari_weekend_date = "2100-01-02"
 
 safari_type_select = "id:safari-type"
 safari_regular_option1 = "Herbivore Tour"
