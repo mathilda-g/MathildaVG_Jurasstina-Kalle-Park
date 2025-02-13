@@ -2,9 +2,9 @@
 Name             Base
 Documentation    General tests not specific to a user story
 Library          SeleniumLibrary
-Library          OperatingSystem
-Resource         ../resources/base.resource
-Variables        ../resources/variables_base.py
+Resource         resources/base.resource
+Test Setup       Open Browser    ${url}    ${BROWSER}
+Test Teardown    Close Browser
 
 
 *** Test Cases ***

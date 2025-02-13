@@ -2,10 +2,24 @@
 Name             Paleontologist
 Documentation    Tests for paleontologist
 Library          SeleniumLibrary
-Resource         ../resources/base.resource
-Resource         ../resources/paleontologist.resource
-Variables        ../resources/variables_base.py
-Variables        ../resources/variables_miser.py
+Resource         resources/paleontologist.resource
+Resource         resources/base.resource
+Test Setup       Open Browser    ${url}    ${BROWSER}
+Test Teardown    Close Browser
 
 *** Test Cases ***
+Register user Stina-Palle
+    Given I am on the register page
+    When I enter username Stina-Palle
+    And I enter a valid password
+    And submit the form
+    Then I should see a message confirming successful registration
+    And I should be redirected to the login page
 
+Login user Stina-Palle
+    Given I am registered as Stina-Palle
+    And I am on the login page
+    When I enter username Stina-Palle
+    And I enter a valid password
+    And submit the form
+    Then I should be logged in

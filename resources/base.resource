@@ -1,19 +1,59 @@
 *** Settings ***
 Library          SeleniumLibrary
-Variables        ../resources/variables_base.py
+Variables        resources/variables_base.py
 
 *** Keywords ***
+I am on the ${page_name} page
+    [Tags]    Kelley    Victor_refactored
+    Set Test Variable    ${page}    ${page_name}
+    Click Link    ${${page}_link}
+    Wait Until Element Is Visible    ${${page}_section}
+
+I navigate to the ${page_name} page
+    [Tags]    Kelley    Victor_refactored
+    I am on the ${page_name} page
+
+I enter username ${username}
+    [Tags]    Victor
+    Input Text    ${${page}_username_input}    ${username}
+
+I enter a valid password
+    [Tags]    Kelley    Victor_refactored
+    Input Password    ${${page}_password_input}    ${password_long}
+
+submit the form
+    [Tags]    Victor
+    Submit Form    ${${page}_form}
+
+I should be redirected to the ${page_name} page
+    [Tags]    Kelley    Victor_refactored
+    Wait Until Element Is Visible    ${${page_name}_section}
+    Set Test Variable    ${page}    ${page_name}
+
+I should be logged in
+    [Tags]    Victor
+    Wait Until Element Is Visible    ${logout_link}
+
+I am registered as ${username}
+    [Tags]    Victor
+    I am on the register page
+    And I enter username ${username}
+    And I enter a valid password
+    And submit the form
+    And I should be redirected to the login page
+
+I am logged in as ${username}
+    [Tags]    Kelley Victor_refactored
+    I am registered as ${username}
+    And I enter username ${username}
+    And I enter a valid password
+    And submit the form
+    And I should be logged in
 
 Message Should Be Visible
     [Arguments]    ${error_message_element}    ${error_message_text}
     Wait Until Element Is Visible    ${error_message_element}
     Element Text Should Be    ${error_message_element}    ${error_message_text}
-
-I am on the Register page
-    [Tags]    Kelley
-    Open Browser    ${url}    ${BROWSER}
-    Click Element    ${register_link}
-    Wait Until Element Is Visible    ${register_section}
    
 I have entered a valid username
     [Tags]    Kelley
@@ -22,10 +62,6 @@ I have entered a valid username
 I create a username using special characters
     [Tags]    Kelley
     Input Text    ${register_username_input}    ${username_with_special_characters}
-
-I enter a valid password
-    [Tags]    Kelley
-    Input Text    ${register_password_input}    ${password_long}
 
 I enter an invalid password
     [Tags]    Kelley
@@ -38,13 +74,7 @@ Click on the register button
 I should see a message confirming successful registration
     [Tags]    Kelley
     Message Should Be Visible    ${register_message}    ${register_success_message}
+    
 I should see an error message
     [Tags]    Kelley
     Message Should Be Visible    ${register_message}   ${register_error_short_password}
-
-I should be redirected to the login page
-    [Tags]    Kelley
-     Wait Until Element Is Visible    ${login_section}
-
-    
-

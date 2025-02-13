@@ -14,8 +14,8 @@ password_long = 'p4$$w0rd'
 # Page Links
 register_link = "data:section:register-section"
 login_link = "data:section:login-section"
-book_safaris_link = "data:section:safari-section"
-buy_tickets_link = "data:section:tickets-section"
+safari_link = "data:section:safari-section"
+tickets_link = "data:section:tickets-section"
 cart_link = "data:section:cart-section"
 
 # Home Page Visability
