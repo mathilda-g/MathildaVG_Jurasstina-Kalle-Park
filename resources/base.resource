@@ -1,5 +1,6 @@
 *** Settings ***
 Library          SeleniumLibrary
+Library          String
 Variables        resources/variables_base.py
 
 *** Keywords ***
@@ -17,9 +18,25 @@ I enter username ${username}
     [Tags]    Victor
     Input Text    ${${page}_username_input}    ${username}
 
+I have entered a valid username
+    [Tags]    Kelley
+    Input Text    ${register_username_input}    ${username_with_letters}
+
+I enter a username using special characters
+    [Tags]    Kelley
+    Input Text    ${register_username_input}    ${username_with_special_characters}
+
+I enter a username using numbers
+    [Tags]    Victor
+    Input Text    ${register_username_input}    ${username_with numbers}
+
 I enter a valid password
     [Tags]    Kelley    Victor_refactored
     Input Password    ${${page}_password_input}    ${password_long}
+
+I enter an invalid password
+    [Tags]    Kelley
+    Input Text    ${register_password_input}    ${password_short}
 
 submit the form
     [Tags]    Victor
@@ -43,7 +60,7 @@ I am registered as ${username}
     And I should be redirected to the login page
 
 I am logged in as ${username}
-    [Tags]    Kelley Victor_refactored
+    [Tags]    Kelley    Victor_refactored
     I am registered as ${username}
     And I enter username ${username}
     And I enter a valid password
@@ -55,18 +72,6 @@ Message Should Be Visible
     Wait Until Element Is Visible    ${error_message_element}
     Element Text Should Be    ${error_message_element}    ${error_message_text}
    
-I have entered a valid username
-    [Tags]    Kelley
-    Input Text    ${register_username_input}    ${username_with_letters}
-
-I create a username using special characters
-    [Tags]    Kelley
-    Input Text    ${register_username_input}    ${username_with_special_characters}
-
-I enter an invalid password
-    [Tags]    Kelley
-    Input Text    ${register_password_input}    ${password_short}
-
 Click on the register button
     [Tags]    Kelley
     Click Button    ${register_button}
@@ -78,3 +83,35 @@ I should see a message confirming successful registration
 I should see an error message
     [Tags]    Kelley
     Message Should Be Visible    ${register_message}   ${register_error_short_password}
+    
+I add a ${ticket_category} ${ticket_type} ticket to my cart
+    [Tags]    Kelley
+    [Documentation]    Adds desired ticket type to cart, utilizing the standard ticket quantity of 1
+    Select From List By Value    ${tickets_category_select}    ${ticket_category}
+    Select From List By Value    ${tickets_type_select}    ${ticket_type}
+    Click Button    ${tickets_button}
+    Handle Alert
+    
+I have a ${ticket_category} ${ticket_type} ticket in my cart
+    [Tags]    Victor
+    I navigate to the tickets page
+    I add a ${ticket_category} ${ticket_type} ticket to my cart
+    
+I add the ${safari_type} safari on ${yyyymmdd} to my cart
+    [Tags]    Victor
+    Input Text    ${safari_date_input}    ${yyyymmdd}
+    Select From List By Value    ${safari_type_select}    ${safari_type}
+    submit the form
+    Handle Alert
+
+I add the ${safari_type} safari on a ${date_var_name} to my cart
+    [Tags]    Victor
+    I add the ${safari_type} safari on ${safari_${date_var_name}} to my cart
+
+    
+the ${item_name} should be listed on the cart page
+    [Tags]    Victor
+    I navigate to the cart page
+    Element Should Contain    ${cart_items}    ${item name}
+    
+

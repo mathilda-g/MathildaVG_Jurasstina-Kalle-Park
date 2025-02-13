@@ -9,6 +9,7 @@ Test Teardown    Close Browser
 
 *** Test Cases ***
 Register user Stina-Palle
+    [Tags]    Victor
     Given I am on the register page
     When I enter username Stina-Palle
     And I enter a valid password
@@ -17,6 +18,7 @@ Register user Stina-Palle
     And I should be redirected to the login page
 
 Login user Stina-Palle
+    [Tags]    Victor
     Given I am registered as Stina-Palle
     And I am on the login page
     When I enter username Stina-Palle
