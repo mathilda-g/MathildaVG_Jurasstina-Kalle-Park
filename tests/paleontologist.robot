@@ -1,6 +1,7 @@
 *** Settings ***
 Name             Paleontologist
-Documentation    Tests for paleontologist
+Documentation    Grupp 5, Victor, Kelley och Mathilda
+...              Tests for paleontologist
 Library          SeleniumLibrary
 Resource         resources/paleontologist.resource
 Resource         resources/base.resource
