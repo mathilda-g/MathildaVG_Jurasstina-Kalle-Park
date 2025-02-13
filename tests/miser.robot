@@ -24,16 +24,18 @@ No Discount on Adult Entry Ticket
     And I navigate to the cart page
     Then the total price should be $50 and not reflect a ticket discount
 
-Given I am on the register page
-  When I enter username "Ståla-Nalle"
-  And I enter a valid password
-  And Click on the register button
-  Then I should see a message confirming successful registration
-  And I should be redirected to the login page
+Register as Ståla-Nalle
+    [Tags]    Mathilda
+    Given I am on the register page
+    When I enter username Ståla-Nalle
+    And I enter a valid password
+    And Click on the register button
+    Then I should see a message confirming successful registration
+    And I should be redirected to the login page
 
 
 No discount on Senior Entry Ticket
-   [Tags]       Mathilda
+   [Tags]       Mathilda    Victor_refactored
    Given I am logged in as Ståla-Nalle
    When I navigate to the tickets page
    And I add a Regular Senior ticket to my cart
@@ -51,10 +53,10 @@ No discount on VIP Senior Entry Ticket
 
 
 Registered User Should Not Receive Discount When Purchasing Ticket
-    [Tags]       Mathilda
-    Given I am registered as "Ståla-Nalle"
-    And I am logged in as "Ståla-Nalle"
-    When I add a Regular Entrance Ticket to my cart
+    [Tags]       Mathilda    Victor_refactored
+    Given I am logged in as Ståla-Nalle
+    And I am on the tickets page
+    When I add a Regular Adult ticket to my cart
     And I navigate to the Cart page
-    Then The total price should not reflect a ticket discount
+    Then The total price should be $50 and not reflect a ticket discount
    
