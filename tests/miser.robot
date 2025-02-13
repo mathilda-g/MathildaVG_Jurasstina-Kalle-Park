@@ -4,7 +4,6 @@ Documentation    Tests for Snåla-Kalle
 Library          SeleniumLibrary
 Resource         resources/base.resource
 Resource         resources/miser.resource
-Resource         resources/miser.resource
 Test Setup       Open Browser    ${url}    ${BROWSER}
 Test Teardown    Close Browser
 
