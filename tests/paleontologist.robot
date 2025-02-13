@@ -28,3 +28,20 @@ Login user Stina-Palle
     And I enter a valid password
     And submit the form
     Then I should be logged in
+
+Add a Regular Adult ticket to cart
+    [Tags]    Victor
+    Given I am logged in as Stina-Palle
+    And I am on the tickets page
+    When I add a Regular Adult ticket to my cart
+    Then the Regular Adult Ticket should be listed on the cart page
+
+Book regular safari on a workday
+    [Tags]    Victor
+    Given I am logged in as Stina-Palle
+    And I have a Regular Adult ticket in my cart
+    And I am on the safari page
+    When I add the Herbivore Tour safari on a workday date to my cart
+    And I add the T-Rex Rumble safari on a workday date to my cart
+    Then the Herbivore Tour should be listed on the cart page
+    And the T-Rex Rumble should be listed on the cart page

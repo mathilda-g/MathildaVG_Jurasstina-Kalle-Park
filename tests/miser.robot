@@ -9,6 +9,23 @@ Test Setup       Open Browser    ${url}    ${BROWSER}
 Test Teardown    Close Browser
 
 *** Test Cases ***
+Register as Ståla-Nalle
+    [Tags]    Mathilda
+    Given I am on the register page
+    When I enter username Ståla-Nalle
+    And I enter a valid password
+    And Click on the register button
+    Then I should see a message confirming successful registration
+    And I should be redirected to the login page
+    
+Login as Ståla-Nalle
+    [Tags]    Victor
+    Given I am registered as Ståla-Nalle
+    And I am on the login page
+    When I enter username Ståla-Nalle
+    And I enter a valid password
+    And submit the form
+    Then I should be logged in
 
 No Discount on VIP Adult Entry Ticket
     [Tags]    Kelley
@@ -25,15 +42,6 @@ No Discount on Adult Entry Ticket
     And I add a Regular Adult ticket to my cart
     And I navigate to the cart page
     Then the total price should be $50 and not reflect a ticket discount
-
-Register as Ståla-Nalle
-    [Tags]    Mathilda
-    Given I am on the register page
-    When I enter username Ståla-Nalle
-    And I enter a valid password
-    And Click on the register button
-    Then I should see a message confirming successful registration
-    And I should be redirected to the login page
 
 No discount on Senior Entry Ticket
    [Tags]       Mathilda    Victor_refactored
