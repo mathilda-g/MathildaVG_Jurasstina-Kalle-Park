@@ -12,7 +12,7 @@ Test Teardown    Close Browser
 Register as Ståla-Nalle
     [Tags]    Mathilda    
     [Documentation]   Mathilda    
-    ...   Test to register user with username "Ståla-Nalle" och verify that registration succeed
+    ...   Test to register user with username "Ståla-Nalle" and verify that registration succeeded
     ...   After the registration the user should be redirected to the login page
     Given I am on the register page
     When I enter username Ståla-Nalle
@@ -37,7 +37,7 @@ Login as Ståla-Nalle
 No Discount on VIP Adult Entry Ticket
     [Tags]    Kelley
     [Documentation]    Mathilda 
-    ...    Test to verify that a logged in user does not receive a discount a VIP Adult entry ticket 
+    ...    Test to verify that a logged in user does not receive a discount on a VIP Adult entry ticket 
     ...    The total price should remain $100 without any discount applied
     Given I am logged in as Ståla-Nalle
     When I navigate to the tickets page
@@ -48,7 +48,7 @@ No Discount on VIP Adult Entry Ticket
 No Discount on Adult Entry Ticket
     [Tags]    Kelley
     [Documentation]    Mathilda 
-    ...    Test to verify that a logged in user does not receive a discount a Regular Adult entry ticket 
+    ...    Test to verify that a logged in user does not receive a discount on a Regular Adult entry ticket 
     ...    The total price should remain $50 without any discount applied
     Given I am logged in as Ståla-Nalle
     When I navigate to the tickets page
@@ -77,14 +77,3 @@ No discount on VIP Senior Entry Ticket
    And I add a VIP Senior ticket to my cart
    And I navigate to the cart page
    Then the total price should be $80 and not reflect a ticket discount
-
-Registered User Should Not Receive Discount When Purchasing Ticket
-    [Tags]       Mathilda    Victor_refactored
-    [Documentation]    Mathilda 
-    ...    Test to ensure that a registered user does not receive a discount when purchasing a Regular Adult ticket 
-    ...    The total price should remain $50 to confirm that no automatic discount is applied
-    Given I am logged in as Ståla-Nalle
-    And I am on the tickets page
-    When I add a Regular Adult ticket to my cart
-    And I navigate to the Cart page
-    Then The total price should be $50 and not reflect a ticket discount
