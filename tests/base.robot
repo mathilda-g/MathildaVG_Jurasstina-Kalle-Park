@@ -11,6 +11,7 @@ Test Teardown    Close Browser
 *** Test Cases ***
 Create Valid Password
     [Tags]    Kelley
+    [Documentation]    Tests the foundational function of creating a password, used as a starting point for more complex user-specific tests.
     Given I am on the Register page
     And I have entered a valid username
     When I enter a valid password
@@ -20,6 +21,7 @@ Create Valid Password
 
 Create Invalid Password
     [Tags]    Kelley
+    [Documentation]    Tests the foundational function of creating an invalid password, assures the user cannot create a password outside of the system's guidelines.
     Given I am on the Register page
     And I have entered a valid username
     When I enter an invalid password
@@ -28,6 +30,7 @@ Create Invalid Password
      
 Register A Username With Special Characters
     [Tags]    Kelley
+    [Documentation]    Tests that a user is able to register a username with special characters. This applies the the needed "-" symbol used in one of our test cases. 
     Given I am on the Register page
     When I enter a username using special characters
     And I enter a valid password
@@ -36,8 +39,9 @@ Register A Username With Special Characters
     And I should be redirected to the login page
 
 Register username with numbers
-    [Tags]    Victor
-    Given I am on the register page
+    [Tags]             Victor    Kelley_documentation
+    [Documentation]    Tests that a user is able to register a username that includes numbers.
+    Given I am on the Register page
     When I enter a username using numbers
     And I enter a valid password
     And submit the form

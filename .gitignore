@@ -2,10 +2,6 @@
 .idea
 .vscode
 .robotcode_cache
-results
 *.log
-log.html
-output.xml
-report.html
 __pycache__
 selenium-screenshot-*.png
