@@ -108,6 +108,7 @@ I add the ${safari_type} safari on ${yyyy-mm-dd} to my cart
 
 I add the ${safari_type} safari on a ${date_var_name} to my cart
     [Tags]    Victor
+    [Documentation]    This allows a name of a variable to be specified instead of hardcoding a specific date into the test case
     I add the ${safari_type} safari on ${safari_${date_var_name}} to my cart
 
     
