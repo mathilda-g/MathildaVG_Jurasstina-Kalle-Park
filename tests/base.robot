@@ -39,7 +39,7 @@ Register A Username With Special Characters
     And I should be redirected to the login page
 
 Register username with numbers
-    [Tags]    Victor    Kelley_documentation
+    [Tags]             Victor    Kelley_documentation
     [Documentation]    Tests that a user is able to register a username that includes numbers.
     Given I am on the Register page
     When I enter a username using numbers

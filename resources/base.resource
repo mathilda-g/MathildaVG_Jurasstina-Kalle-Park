@@ -6,7 +6,8 @@ Variables        resources/variables_base.py
 *** Keywords ***
 I am on the ${page_name} page
     [Tags]    Kelley    Victor_refactored
-    [Documentation]    Navigates to the specified page using the link id, saves the page name as a variable for later use by steps in the same test. Uses nested variables prefixed with the page name.
+    [Documentation]    Navigates to the specified page using the link id, saves the page name as a variable for later
+    ...                use by steps in the same test. Uses nested variables prefixed with the page name.
     Set Test Variable    ${page}    ${page_name}
     Click Link    ${${page}_link}
     Wait Until Element Is Visible    ${${page}_section}
@@ -45,7 +46,8 @@ submit the form
 
 I should be redirected to the ${page_name} page
     [Tags]    Kelley    Victor_refactored
-    [Documentation]    Used to assert that a redirect have been made and updates the page variable initially set in the "I am on the page_name page" keyword
+    [Documentation]    Used to assert that a redirect have been made and updates the page variable initially set in
+    ...                the "I am on the page_name page" keyword
     Wait Until Element Is Visible    ${${page_name}_section}
     Set Test Variable    ${page}    ${page_name}
 
@@ -108,7 +110,7 @@ I add the ${safari_type} safari on ${yyyy-mm-dd} to my cart
 
 I add the ${safari_type} safari on a ${date_var_name} to my cart
     [Tags]    Victor
-    [Documentation]    This keyword allows a name of a variable to be specified instead of hardcoding a specific date into the test case
+    [Documentation]    Allows a name of a variable to be specified instead of hardcoding a date into the test case
     I add the ${safari_type} safari on ${safari_${date_var_name}} to my cart
 
     
