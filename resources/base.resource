@@ -102,6 +102,8 @@ I have a ${ticket_category} ${ticket_type} ticket in my cart
     
 I add the ${safari_type} safari on ${yyyy-mm-dd} to my cart
     [Tags]    Victor
+    Set Focus To Element    ${safari_type_select}    
+    Set Focus To Element    ${safari_date_input}
     Input Text    ${safari_date_input}    ${yyyy-mm-dd}
     Select From List By Value    ${safari_type_select}    ${safari_type}
     submit the form
@@ -116,6 +118,7 @@ I add the ${safari_type} safari on a ${date_var_name} to my cart
 the ${item_name} should be listed on the cart page
     [Tags]    Victor
     I navigate to the cart page
+    Sleep    2s
     Element Should Contain    ${cart_items}    ${item name}
     
 
