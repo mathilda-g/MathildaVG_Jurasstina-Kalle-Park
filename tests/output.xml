@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2.2 (Python 3.13.1 on darwin)" generated="2025-02-18T11:29:39.909921" rpa="false" schemaversion="5">
+<suite id="s1" name="Miser" source="/Users/mathildagrund/MathildaVG_Jurasstina-Kalle-Park/tests/miser.robot">
+<test id="s1-t1" name="Register as Ståla-Nalle" line="12">
+<kw name="Open Browser" owner="SeleniumLibrary" type="SETUP">
+<msg time="2025-02-18T11:29:40.131435" level="FAIL">Variable '${url}' not found.</msg>
+<arg>${url}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="FAIL" start="2025-02-18T11:29:40.130715" elapsed="0.000808">Variable '${url}' not found.</status>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-02-18T11:29:40.131945" elapsed="0.000227"/>
+</kw>
+<doc>Test to register user with username "Ståla-Nalle" and verify that registration succeeded.
+After the registration the user should be redirected to the login page.</doc>
+<tag>Mathilda</tag>
+<status status="FAIL" start="2025-02-18T11:29:40.129091" elapsed="0.003216">Setup failed:
+Variable '${url}' not found.</status>
+</test>
+<test id="s1-t2" name="Login as Ståla-Nalle" line="23">
+<kw name="Open Browser" owner="SeleniumLibrary" type="SETUP">
+<msg time="2025-02-18T11:29:40.134083" level="FAIL">Variable '${url}' not found.</msg>
+<arg>${url}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="FAIL" start="2025-02-18T11:29:40.133346" elapsed="0.000826">Variable '${url}' not found.</status>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-02-18T11:29:40.134562" elapsed="0.000224"/>
+</kw>
+<doc>Test to login with the user "Ståla-Nalle".
+The user must be registered before logging in
+And after successful login the user should be logged in to the system.</doc>
+<tag>Mathilda_documentation</tag>
+<tag>Victor</tag>
+<status status="FAIL" start="2025-02-18T11:29:40.132685" elapsed="0.002226">Setup failed:
+Variable '${url}' not found.</status>
+</test>
+<test id="s1-t3" name="No Discount on VIP Adult Entry Ticket" line="35">
+<kw name="Open Browser" owner="SeleniumLibrary" type="SETUP">
+<msg time="2025-02-18T11:29:40.136755" level="FAIL">Variable '${url}' not found.</msg>
+<arg>${url}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="FAIL" start="2025-02-18T11:29:40.136113" elapsed="0.000717">Variable '${url}' not found.</status>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-02-18T11:29:40.137200" elapsed="0.000196"/>
+</kw>
+<doc>Test to verify that a logged in user does not receive a discount on a VIP Adult entry ticket.
+The total price should remain $100 without any discount applied.</doc>
+<tag>Kelley</tag>
+<tag>Mathilda_documentation</tag>
+<status status="FAIL" start="2025-02-18T11:29:40.135289" elapsed="0.002220">Setup failed:
+Variable '${url}' not found.</status>
+</test>
+<test id="s1-t4" name="No Discount on Adult Entry Ticket" line="45">
+<kw name="Open Browser" owner="SeleniumLibrary" type="SETUP">
+<msg time="2025-02-18T11:29:40.139202" level="FAIL">Variable '${url}' not found.</msg>
+<arg>${url}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="FAIL" start="2025-02-18T11:29:40.138604" elapsed="0.000670">Variable '${url}' not found.</status>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-02-18T11:29:40.139625" elapsed="0.000200"/>
+</kw>
+<doc>Test to verify that a logged in user does not receive a discount on a Regular Adult entry ticket.
+The total price should remain $50 without any discount applied.</doc>
+<tag>Kelley</tag>
+<tag>Mathilda_documentation</tag>
+<status status="FAIL" start="2025-02-18T11:29:40.137856" elapsed="0.002082">Setup failed:
+Variable '${url}' not found.</status>
+</test>
+<test id="s1-t5" name="No discount on Senior Entry Ticket" line="55">
+<kw name="Open Browser" owner="SeleniumLibrary" type="SETUP">
+<msg time="2025-02-18T11:29:40.141441" level="FAIL">Variable '${url}' not found.</msg>
+<arg>${url}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="FAIL" start="2025-02-18T11:29:40.140886" elapsed="0.000615">Variable '${url}' not found.</status>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-02-18T11:29:40.141782" elapsed="0.000176"/>
+</kw>
+<doc>Test to verify that a logged in user does not receive a discount a Regular Senior entry ticket.
+The total price should remain $40 without any discount applied.</doc>
+<tag>Mathilda</tag>
+<tag>Mathilda_documentation</tag>
+<tag>Victor_refactored</tag>
+<status status="FAIL" start="2025-02-18T11:29:40.140242" elapsed="0.001823">Setup failed:
+Variable '${url}' not found.</status>
+</test>
+<test id="s1-t6" name="No discount on VIP Senior Entry Ticket" line="65">
+<kw name="Open Browser" owner="SeleniumLibrary" type="SETUP">
+<msg time="2025-02-18T11:29:40.144556" level="FAIL">Variable '${url}' not found.</msg>
+<arg>${url}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="FAIL" start="2025-02-18T11:29:40.143293" elapsed="0.001357">Variable '${url}' not found.</status>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-02-18T11:29:40.145106" elapsed="0.000202"/>
+</kw>
+<doc>Test to verify that a logged in user does not receive a discount a VIP Senior entry ticket.
+The total price should remain $80 without any discount applied.</doc>
+<tag>Mathilda</tag>
+<status status="FAIL" start="2025-02-18T11:29:40.142367" elapsed="0.003070">Setup failed:
+Variable '${url}' not found.</status>
+</test>
+<doc>Grupp 5, Victor, Kelley och Mathilda
+Tests for Snåla-Kalle</doc>
+<status status="FAIL" start="2025-02-18T11:29:39.912630" elapsed="0.233367"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="6" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="0" fail="2" skip="0">Kelley</stat>
+<stat pass="0" fail="3" skip="0">Mathilda</stat>
+<stat pass="0" fail="4" skip="0">Mathilda_documentation</stat>
+<stat pass="0" fail="1" skip="0">Victor</stat>
+<stat pass="0" fail="1" skip="0">Victor_refactored</stat>
+</tag>
+<suite>
+<stat name="Miser" id="s1" pass="0" fail="6" skip="0">Miser</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2025-02-18T11:29:40.128029" level="ERROR">Error in file '/Users/mathildagrund/MathildaVG_Jurasstina-Kalle-Park/tests/miser.robot' on line 6: Resource file 'resources/base.resource' does not exist.</msg>
+<msg time="2025-02-18T11:29:40.128337" level="ERROR">Error in file '/Users/mathildagrund/MathildaVG_Jurasstina-Kalle-Park/tests/miser.robot' on line 7: Resource file 'resources/miser.resource' does not exist.</msg>
+</errors>
+</robot>
