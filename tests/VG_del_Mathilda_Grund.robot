@@ -22,6 +22,16 @@ Register an already existing username
     Sleep   2s  
     Then I should see a registration error 
 
+Register without filling in username
+    [Tags]    Mathilda
+    [Documentation]   Test to make sure the system prevents registration with an blank username
+    Given I am on the Register page
+    When I register with an empty username and a valid password
+    And I click on the register button
+    Then I should see a popup with the message "Fyll i det här fältet" next to the username field  
+
+
+
 
 
 
