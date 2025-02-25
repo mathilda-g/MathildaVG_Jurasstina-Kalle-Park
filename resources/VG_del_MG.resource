@@ -18,3 +18,21 @@ I try to register again with ${username} and a valid password
 I should see a registration error
     [Tags]    Mathilda
     Message Should Be Visible    ${register_message}   ${register_error_username_already_exists}
+
+I try to register with a space in the username and a valid password 
+    [Tags]     Mathilda
+    Input Text    ${${page}_username_input}    ${SPACE}
+    Input Text    ${${page}_password_input}    ${password_long}
+
+I should see a empty username error 
+    [Tags]     Mathilda
+    Message Should Be Visible    ${register_message}     ${register_error_no_username_password}
+
+I try to register with empty username and valid password
+    [Tags]      Mathilda
+    Input Text    ${${page}_username_input}    ${EMPTY}
+    Input Text    ${${page}_password_input}    ${password_long}
+
+the focus should be on the username field
+    [Tags]     Mathilda
+    Element Should Be Focused    id:reg-username
