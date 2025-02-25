@@ -4,7 +4,6 @@ Variables        resources/variables_base.py
 Resource    base.resource
 
 *** Keywords ***
-
 I register with ${username} and a valid password
    [Tags]    Mathilda
    Input Text    ${${page}_username_input}    ${username}
@@ -46,14 +45,15 @@ I add the ${safari_type} safari on a weekend date to my cart
     Select From List By Value    ${safari_type_select}    ${safari_type}
     submit the form      
 
-I navigate to the Cart page
-    [Tags]    Mathilda
-    Set Test Variable    ${page_name}    Cart
-    I am on the ${page_name} page
+I should get a confirmation alert that says "${expected_message}"
+    [Tags]     Mathilda
+    Wait Until Alert Is Present    timeout=5s
+    ${alert_text}=    Get Alert Message
+    Should Be Equal As Strings    ${alert_text}    ${expected_message}
+    Accept Alert
 
 I should see an book safari on a weekend error message
      [Tags]      Mathilda
      Message Should Be Visible    ${safari_message}   ${safari_error_weekend_no_vip}   
-
 
 
