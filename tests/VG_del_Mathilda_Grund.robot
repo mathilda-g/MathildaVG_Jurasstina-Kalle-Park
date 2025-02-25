@@ -12,7 +12,8 @@ Test Setup       Open Browser    ${url}    ${BROWSER}
 Test Teardown    Close Browser
 
 *** Test Cases ***
-Register an already existing username
+Register an already existing usernamesource venv/bin/activate
+
     [Tags]       Mathilda
     [Documentation]   Test to make sure the system doesn't allow a username that already exists. 
     ...               And shows a error message "Username already exists. Please choose another."
