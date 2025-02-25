@@ -55,7 +55,14 @@ Book safari on a weekend with Adult VIP-ticket
 
 Book safari on a weekend with Adult Regular ticket
      [Tags]     Mathilda
-     
+     Given I am logged in as Mathilda
+     And I have a Regular Adult ticket in my cart
+     And I am on the safari page
+     When I add the Herbivore Tour safari on a weekend date to my cart     
+     Then I should see an book safari on a weekend error message 
+
+
+
     
 
 

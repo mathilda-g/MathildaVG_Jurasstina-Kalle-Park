@@ -42,7 +42,7 @@ safari_section = "id:safari-section"
 safari_date_input = "id:safari-date"
 safari_past_date = "2021-01-01"
 safari_workday_date = "002026-01-01"
-safari_weekend_date = "002026-01-02"
+safari_weekend_date = "002025-03-09"
 
 safari_type_select = "id:safari-type"
 safari_regular_option1 = "Herbivore Tour"

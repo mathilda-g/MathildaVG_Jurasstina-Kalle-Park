@@ -1,6 +1,7 @@
 *** Settings ***
 Library          SeleniumLibrary
 Variables        resources/variables_base.py
+Resource    base.resource
 
 *** Keywords ***
 
@@ -43,13 +44,16 @@ I add the ${safari_type} safari on a weekend date to my cart
     Set Focus To Element    ${safari_date_input}
     Input Text    ${safari_date_input}    ${safari_weekend_date}
     Select From List By Value    ${safari_type_select}    ${safari_type}
-    submit the form
-    Handle Alert    
-    
+    submit the form      
+
 I navigate to the Cart page
     [Tags]    Mathilda
     Set Test Variable    ${page_name}    Cart
     I am on the ${page_name} page
+
+I should see an book safari on a weekend error message
+     [Tags]      Mathilda
+     Message Should Be Visible    ${safari_message}   ${safari_error_weekend_no_vip}   
 
 
 
