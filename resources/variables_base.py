@@ -40,7 +40,7 @@ register_button = "Register"
 # Book Safaris Page
 safari_section = "id:safari-section"
 safari_date_input = "id:safari-date"
-safari_past_date = "2021-01-01"
+safari_past_date = "002021-01-01"
 safari_workday_date = "002026-01-01"
 safari_weekend_date = "002025-03-09"
 

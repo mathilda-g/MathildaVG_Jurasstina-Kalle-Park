@@ -45,15 +45,20 @@ I add the ${safari_type} safari on a weekend date to my cart
     Select From List By Value    ${safari_type_select}    ${safari_type}
     submit the form      
 
-I should get a confirmation alert that says "${expected_message}"
-    [Tags]     Mathilda
-    Wait Until Alert Is Present    timeout=5s
-    ${alert_text}=    Get Alert Message
-    Should Be Equal As Strings    ${alert_text}    ${expected_message}
-    Accept Alert
-
 I should see an book safari on a weekend error message
      [Tags]      Mathilda
      Message Should Be Visible    ${safari_message}   ${safari_error_weekend_no_vip}   
+
+I add the ${safari_type} on a past date to my cart
+     [Tags]     Mathilda
+     Set Focus To Element    ${safari_type_select}
+     Set Focus To Element    ${safari_date_input}
+     Input Text    ${safari_date_input}    ${safari_past_date}
+     Select From List By Value    ${safari_type_select}    ${safari_type}
+     submit the form
+
+I should see a book safari on a past date error message
+     [Tags]     Mathilda
+     Message Should Be Visible    ${safari_message}    ${safari_error_past_date}
 
 

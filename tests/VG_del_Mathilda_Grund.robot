@@ -2,8 +2,8 @@
 Name             VG_del_Mathilda_Grund
 Documentation    Testsvit för VG-delen Mathilda Grund  
 ...              Acceptanskiriterier: Användare ska kunna registrera ett unikt användarnamn på hemsidan: Testfall 1, 2, 3 
-...              Användare kan boka Safariturer på vardagar, användare som har köpt VIP-biljetter
-...              kan även boka safariturer på helger samt 2 VIP-exklusiva turer: Testfall 4, 5
+...              En användare med Regular biljett ska inte kunna boka en safari på en helg. Testfall: 4
+...              Och man ska inte kunna boka en safari för ett datum som redan passerat. Testfall: 5
 Library          SeleniumLibrary
 Resource         resources/VG_del_MG.resource
 Resource         resources/base.resource
@@ -47,13 +47,21 @@ Register with empty username and valid password
     
 Book safari on a weekend with Adult Regular ticket
      [Tags]     Mathilda
+     [Documentation]   Test to make sure a user with Regular ticket can't book a safari on a weekend.
      Given I am logged in as Mathilda
      And I have a Regular Adult ticket in my cart
      And I am on the safari page
      When I add the Herbivore Tour safari on a weekend date to my cart     
      Then I should see an book safari on a weekend error message 
 
-
+Book safari on a past date
+     [Tags]    Mathilda
+     [Documentation]    Test to make sure a user can't book a safari on a past date.
+     Given I am logged in as Mathilda
+     And I have a VIP Adult ticket in my cart
+     And I am on the safari page
+     When I add the Herbivore Tour on a past date to my cart
+     Then I should see a book safari on a past date error message
 
     
 
