@@ -36,3 +36,20 @@ I try to register with empty username and valid password
 the focus should be on the username field
     [Tags]     Mathilda
     Element Should Be Focused    id:reg-username
+
+I add the ${safari_type} safari on a weekend date to my cart
+    [Tags]     Mathilda
+    Set Focus To Element    ${safari_type_select}
+    Set Focus To Element    ${safari_date_input}
+    Input Text    ${safari_date_input}    ${safari_weekend_date}
+    Select From List By Value    ${safari_type_select}    ${safari_type}
+    submit the form
+    Handle Alert    
+    
+I navigate to the Cart page
+    [Tags]    Mathilda
+    Set Test Variable    ${page_name}    Cart
+    I am on the ${page_name} page
+
+
+
